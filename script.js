@@ -59,10 +59,7 @@ function generaCodice(){
         percDaTre: numeroRandom(0,100) + "%",
       };
 
-      arrayGiocatori.push(player); //così si fa il push di un oggetto all'interno di un array DEVO METTERE LE GRAFFE
-
-      // console.log(player.codiceGiocatore); //mi loggo i codici per vedere pi quale inserire altrimenti avrei tutti gli oggetti chiusi e non visualizzabili in console.log
-      // document.writeln(player.codiceGiocatore + "<br>");
+      arrayGiocatori.push(player); //così si fa il push di un oggetto all'interno di un array
 
       var source = $('#codici-giocatori').html();
       var template = Handlebars.compile(source);
@@ -75,12 +72,13 @@ function generaCodice(){
 
       $('#idCodGiocatori').append(html);
 
-      // console.log(html);
   }
 
   $('#codice-giocatore-singolo').click(function(){
+
+
     var codiceDelGiocatoreSingolo = $(this).text();
-    console.log(codiceDelGiocatoreSingolo);
+
 
     for (var i = 0; i < arrayGiocatori.length; i++) {
 
