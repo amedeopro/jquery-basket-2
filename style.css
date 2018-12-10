@@ -44,4 +44,8 @@
   width: 80%;
   height: 500px;
   border: 1px solid #20447B;
+  text-align: center;
+}
+.data-right h3{
+  margin: 10px auto;
 }
