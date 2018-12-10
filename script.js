@@ -90,7 +90,17 @@ function generaCodice(){
 
          for (var key in giocatore) {
 
-           document.writeln(key + ": " + giocatore[key] + "<br>");
+           var statistiche = $('#statistiche-giocatori').html();
+           var template = Handlebars.compile(statistiche);
+
+           var context = {
+             chiave: key,
+             giocatoreChiave: giocatore[key],
+           };
+
+           var stat = template(context);
+
+           $('#stat-giocatore').append(stat);
 
          }
 

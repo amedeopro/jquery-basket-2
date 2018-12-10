@@ -18,7 +18,7 @@
         <div class="data-left" id="idCodGiocatori">
 
         </div>
-        <div class="data-right">
+        <div class="data-right" id="stat-giocatore">
 
         </div>
       </div>
@@ -29,6 +29,13 @@
     <script id="codici-giocatori" type="text/x-handlebars-template">
       <div class="entry">
         <p id="codice-giocatore-singolo">{{codGiocatore}}</p>
+      </div>
+    </script>
+
+    <script id="statistiche-giocatori" type="text/x-handlebars-template">
+      <div class="statistiche">
+        <p id="key">{{ chiave }}</p>
+        <p id="giocatorekey">{{ giocatoreChiave }}</p>
       </div>
     </script>
 
