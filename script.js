@@ -43,8 +43,6 @@ function generaCodice(){
   return codice;
 }
 
-
-
 //creo un array con all'interno uno o più oggetti per creare i giocatori
 
   var arrayGiocatori = [];
@@ -79,6 +77,32 @@ function generaCodice(){
 
       // console.log(html);
   }
+
+  $('#codice-giocatore-singolo').click(function(){
+    var codiceDelGiocatoreSingolo = $(this).text();
+    console.log(codiceDelGiocatoreSingolo);
+
+    for (var i = 0; i < arrayGiocatori.length; i++) {
+
+       var giocatore = arrayGiocatori[i];
+
+        if (codiceDelGiocatoreSingolo == giocatore.codiceGiocatore) {
+
+         for (var key in giocatore) {
+
+           document.writeln(key + ": " + giocatore[key] + "<br>");
+
+         }
+
+       }
+
+      }
+    });
+
+
+
+
+
 
  // console.log(arrayGiocatori);
 
