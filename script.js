@@ -64,16 +64,17 @@ function generaCodice(){
       arrayGiocatori.push(player); //così si fa il push di un oggetto all'interno di un array DEVO METTERE LE GRAFFE
 
       console.log(player.codiceGiocatore); //mi loggo i codici per vedere pi quale inserire altrimenti avrei tutti gli oggetti chiusi e non visualizzabili in console.log
+      document.writeln(player.codiceGiocatore + "<br>");
   }
 
   console.log(arrayGiocatori);
 
-  var richiestaUtente = prompt('inserisci codice giocatore');
+  // var richiestaUtente = prompt('inserisci codice giocatore');
 
   for (var i = 0; i < arrayGiocatori.length; i++) {
     var giocatore = arrayGiocatori[i];
 
-    if (richiestaUtente == giocatore.codiceGiocatore) {
+    // if (richiestaUtente == giocatore.codiceGiocatore) {
 
       for (var key in giocatore) {
 
@@ -81,6 +82,6 @@ function generaCodice(){
 
       }
 
-    }
+    // }
 
   }
