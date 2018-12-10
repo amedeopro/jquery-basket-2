@@ -63,8 +63,21 @@ function generaCodice(){
 
       arrayGiocatori.push(player); //così si fa il push di un oggetto all'interno di un array DEVO METTERE LE GRAFFE
 
-      console.log(player.codiceGiocatore); //mi loggo i codici per vedere pi quale inserire altrimenti avrei tutti gli oggetti chiusi e non visualizzabili in console.log
-      document.writeln(player.codiceGiocatore + "<br>");
+      // console.log(player.codiceGiocatore); //mi loggo i codici per vedere pi quale inserire altrimenti avrei tutti gli oggetti chiusi e non visualizzabili in console.log
+      // document.writeln(player.codiceGiocatore + "<br>");
+
+      var source = $('#codici-giocatori').html();
+      var template = Handlebars.compile(source);
+
+      var context = {
+        codGiocatore: player.codiceGiocatore,
+      };
+
+      var html = template(context);
+
+      $('#idCodGiocatori').append(html);
+
+      console.log(html);
   }
 
   console.log(arrayGiocatori);

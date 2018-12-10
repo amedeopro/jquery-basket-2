@@ -28,6 +28,17 @@
   height: 500px;
   float: left;
   border: 1px solid #20447B;
+  text-align: center;
+  overflow-y: scroll;
+}
+
+.data-left a{
+  color: #20447B;
+  text-decoration: none;
+}
+
+.entry a{
+  margin-bottom: 10px;
 }
 
 .data-right{
