@@ -77,24 +77,24 @@ function generaCodice(){
 
       $('#idCodGiocatori').append(html);
 
-      console.log(html);
+      // console.log(html);
   }
 
-  console.log(arrayGiocatori);
+ // console.log(arrayGiocatori);
 
-  // var richiestaUtente = prompt('inserisci codice giocatore');
-
-  for (var i = 0; i < arrayGiocatori.length; i++) {
-    var giocatore = arrayGiocatori[i];
-
-    // if (richiestaUtente == giocatore.codiceGiocatore) {
-
-      for (var key in giocatore) {
-
-        document.writeln(key + ": " + giocatore[key] + "<br>");
-
-      }
-
-    // }
-
-  }
+ // var richiestaUtente = prompt('inserisci codice giocatore');
+ //
+ //  for (var i = 0; i < arrayGiocatori.length; i++) {
+ //    var giocatore = arrayGiocatori[i];
+ //
+ //     if (richiestaUtente == giocatore.codiceGiocatore) {
+ //
+ //      for (var key in giocatore) {
+ //
+ //        document.writeln(key + ": " + giocatore[key] + "<br>");
+ //
+ //      }
+ //
+ //    }
+ //
+ //  }
