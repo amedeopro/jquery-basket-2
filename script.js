@@ -74,7 +74,7 @@ function generaCodice(){
 
   }
 
-  $('#codice-giocatore-singolo').click(function(){
+  $('.codice-giocatore-singolo').click(function(){
 
 
     var codiceDelGiocatoreSingolo = $(this).text();
