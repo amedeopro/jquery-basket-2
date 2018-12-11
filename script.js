@@ -86,47 +86,23 @@ function generaCodice(){
 
         if (codiceDelGiocatoreSingolo == giocatore.codiceGiocatore) {
 
-         for (var key in giocatore) {
+          var statistiche = $('#statistiche-giocatori').html();
+          var template = Handlebars.compile(statistiche);
 
-           var statistiche = $('#statistiche-giocatori').html();
-           var template = Handlebars.compile(statistiche);
+          var context = {
+            codGioc: giocatore.codiceGiocatore,
+            pntFatt: giocatore.puntiFatti,
+            rimb: giocatore.rimbalzi,
+            falli: giocatore.falli,
+            pntdue: giocatore.percDaDue,
+            pnttre: giocatore.percDaTre,
+          };
 
-           var context = {
-             chiave: key,
-             giocatoreChiave: giocatore[key],
-           };
+          var stat = template(context);
 
-           var stat = template(context);
-
-           $('#stat-giocatore').append(stat);
-
-         }
+          $('#stat-giocatore').html(stat);
 
        }
 
       }
     });
-
-
-
-
-
-
- // console.log(arrayGiocatori);
-
- // var richiestaUtente = prompt('inserisci codice giocatore');
- //
- //  for (var i = 0; i < arrayGiocatori.length; i++) {
- //    var giocatore = arrayGiocatori[i];
- //
- //     if (richiestaUtente == giocatore.codiceGiocatore) {
- //
- //      for (var key in giocatore) {
- //
- //        document.writeln(key + ": " + giocatore[key] + "<br>");
- //
- //      }
- //
- //    }
- //
- //  }
